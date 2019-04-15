@@ -18,12 +18,11 @@ class ProductList extends Component{
 
     render(){
         let sorters = [{property: 'vote', direction: 'DESC'}];
-        let productList = 'Products are not available yet.';
+        let productList = 'No match found for your search: ' + this.props.term;
         if(this.state.productList.length > 0){
             productList = this.state.productList.sort(createSorter(...sorters)).map((product) =>
                 <Product key={product.id} productId={product.id} data={product} onVoteUp={this.props.onVoteUp}/> )
         }
-
         return(
             <div className="container">{productList}</div>
         )
