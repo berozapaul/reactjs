@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Product = ({data, onVoteUp}) =>{
-   const {id, type, place, title, vote, image} = data;
+   const {id, type, place, title, vote, image} = data || [];
    return(
        <div className="card row">
            <div className="col-xs-12 col-sm-4">
@@ -12,7 +12,7 @@ const Product = ({data, onVoteUp}) =>{
                    <a href={"javascript:void(0)"}>
                        <i className="fa fa-caret-up" onClick={() => onVoteUp(id)}></i>
                    </a>
-                   <span>{vote}</span>
+                   <span className="vote">{vote || 0}</span>
                </div>
                <div className="card-body">
                    <div className="card-type">{type} · {place}</div>
@@ -21,5 +21,5 @@ const Product = ({data, onVoteUp}) =>{
            </div>
        </div>
    )
-}
+};
 export default Product
