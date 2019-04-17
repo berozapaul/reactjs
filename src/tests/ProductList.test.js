@@ -1,6 +1,4 @@
 import React from 'react';
-import data from '../data';
-import {getRandomInt, isValidUrl} from '../utils/Utils';
 import ProductList from '../components/ProductList';
 
 import { configure } from 'enzyme';
