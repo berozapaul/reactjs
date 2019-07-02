@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import data from './data';
 
+import Header from './components/Header';
 import Search from './components/Search';
 import ProductList from './components/ProductList';
 import {createSorter} from './utils/Sort';
 import {createFilter} from './utils/Filter';
+import ModalProvider from './components/ModalProvider';
 
 /*
  * Purpose: App component is the entry point. It initializes the states.
@@ -57,13 +59,16 @@ class App extends Component {
           foundProducts.sort(createSorter(...sorters));
       }
       return (
-        <div className="reactjs-app">
-          <h2>Popular products</h2>
-          <hr/>
-          <Search onSearchChange={this.productSearch}/>
-          <hr/>
-          <ProductList products={foundProducts} term={this.state.term} onVoteUp={this.productVoteUp}/>
-        </div>
+          <ModalProvider>
+              <div className="reactjs-app">
+                  <Header/>
+                  <h2>Popular products</h2>
+                  <hr/>
+                  <Search onSearchChange={this.productSearch}/>
+                  <hr/>
+                  <ProductList products={foundProducts} term={this.state.term} onVoteUp={this.productVoteUp}/>
+              </div>
+          </ModalProvider>
       );
   }
 }
