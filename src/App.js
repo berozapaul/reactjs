@@ -63,9 +63,11 @@ class App extends Component {
           <ModalProvider>
               <div className="reactjs-app">
                   <Header/>
-                  <h2>Popular products</h2>
-                  <hr/>
-                  <Search onSearchChange={this.productSearch}/>
+                  <div className="container">
+                     <h2>Popular products</h2>
+                     <hr/>
+                     <Search onSearchChange={this.productSearch}/>
+                  </div>
                   <hr/>
                   <ProductList products={foundProducts} term={this.state.term} onVoteUp={this.productVoteUp}/>
               </div>
