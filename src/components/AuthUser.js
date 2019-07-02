@@ -1,19 +1,19 @@
 import React from 'react';
 import AppContext from '../AppContext';
 /*
- * Purpose: The purpose of this component is to render common header.
- *          This component is going to be common to all routes. It is
- *          also responsible for showing a signin dialog for the user.
- *          As soon as user signs up it shows the user as logged in.
+ * Purpose: The purpose of this component is to handle user login, logout
+ *          using React Context API.
  * Version: 1.0
  * Author: dev@cefalo.com
  */
 
 const AuthUser = () =>  (
     <AppContext.Consumer>
-        {(context) => {
+        {(context) => { // Consumer requires a function as a child
+            // Check if the user is logged in or not
             if(context.state.user){
                 return (
+                // Fragments let us group a list of children without adding extra nodes to the DOM.
                 <React.Fragment>
                     <ul className="nav navbar-nav">
                         <li><a href="javascript:void(0)">Welcome {context.state.user.username}</a></li>

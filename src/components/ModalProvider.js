@@ -1,10 +1,8 @@
 import React, { Component }  from 'react';
 import AppContext from '../AppContext';
 /*
- * Purpose: The purpose of this component is to render common header.
- *          This component is going to be common to all routes. It is
- *          also responsible for showing a signin dialog for the user.
- *          As soon as user signs up it shows the user as logged in.
+ * Purpose: Every Context object comes with a Provider React component that allows
+ *          consuming components to subscribe to context changes.
  * Version: 1.0
  * Author: dev@cefalo.com
  */

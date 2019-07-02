@@ -5,9 +5,10 @@ import data from './data';
 import Header from './components/Header';
 import Search from './components/Search';
 import ProductList from './components/ProductList';
+import ModalProvider from './components/ModalProvider';
+
 import {createSorter} from './utils/Sort';
 import {createFilter} from './utils/Filter';
-import ModalProvider from './components/ModalProvider';
 
 /*
  * Purpose: App component is the entry point. It initializes the states.

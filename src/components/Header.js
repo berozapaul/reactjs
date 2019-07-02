@@ -19,8 +19,8 @@ const Header = () =>{
                        <a className="navbar-brand" href="/">ReactJS</a>
                    </div>
                    <ul className="nav navbar-nav">
-                       <li className="active"><a href="#">Home</a></li>
-                       <li><a href="#">About</a></li>
+                       <li className="active"><a href="/">Home</a></li>
+                       <li><a href="javascript:void(0);">About</a></li>
                    </ul>
                    <ul className="nav navbar-nav navbar-right">
                        <li>
